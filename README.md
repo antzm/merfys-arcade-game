@@ -1,9 +1,23 @@
-# Classic Arcade Game Clone Project
+# Merfys Arcade Game
 
 ## Table of Contents
 
+- [Game history](#Game history)
 - [Instructions](#instructions)
 - [Contributing](#contributing)
+
+## Game history
+
+Frogger is a classic arcade game that was developed in 1981 by Konami and was distributed by Sega. It is one of the most recognizable classic arcade games of the 80's, which was considered as the golden age of the arcade games.
+
+![frogger arcade game screenshot](images/frogger-image.jpg)
+[Image source: BBC Games Archive](http://bbcmicro.co.uk/game.php?id=1934)
+
+The purpose of the original game was to direct the frogs to their homes, through a busy road and a hazardous river. Throughout the years, various clones of Frogger were developed, for almost every available platform and operating system. 
+
+Worth mentioning also, is the characteristic music of the game, which is still recognizable after all these years.
+
+[Source: Wikipedia](https://en.wikipedia.org/wiki/Frogger)
 
 ## Instructions
 
