@@ -2,9 +2,14 @@
 
 ## Table of Contents
 
+- [Intro](#Intro)
 - [History](#History)
 - [Instructions](#instructions)
 - [Contributing](#contributing)
+
+## Intro
+
+This project is part of Udacity's FEND program and the starter code can be found in this repository. According to the instructions, the functions for this project should be object-oriented functions (either class functions or class prototype functions) and the keyword `this` should be used appropriately inside the code, so to refer to the object the function is called upon.
 
 ## History
 
