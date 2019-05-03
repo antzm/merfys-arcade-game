@@ -5,6 +5,9 @@
 - [Intro](#intro)
 - [History](#history)
 - [Instructions](#instructions)
+		- [How to Run the game](#how to Run the game)
+		- [How to Play the game](#how to Play the game)
+- [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -39,6 +42,10 @@ Make sure the functions you write are **object-oriented** - either class functio
 Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
 
 For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+
+## Dependencies
+
+This game uses the following files:
 
 ## Contributing
 
