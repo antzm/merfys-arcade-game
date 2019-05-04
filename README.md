@@ -19,9 +19,8 @@ This project is part of Udacity's FEND program and the starter code can be found
 
 Frogger is a classic arcade game that was developed in 1981 by Konami and was distributed by Sega. It is one of the most recognizable classic arcade games of the 80's, which was considered as the golden age of the arcade games.
 
-![frogger arcade game screenshot](images/frogger-image.jpg)
-
-Frogger game screenshot [_(Image source: BBC Games Archive)_](http://bbcmicro.co.uk/game.php?id=1934)
+![frogger arcade game screenshot](images/frogger-image.jpg)  
+**Frogger game screenshot** [_(Image source: BBC Games Archive)_](http://bbcmicro.co.uk/game.php?id=1934)
 
 The purpose of the original game was to direct the frogs to their homes, through a busy road and a hazardous river. Throughout the years, various clones of Frogger were developed, for almost every available platform and operating system. 
 
