@@ -44,7 +44,39 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 ## Dependencies
 
-This game uses the following files:
+The game uses the following files:
+
+index.html
+
+css/
+	style.css
+
+js/
+	app.js
+	engine.js
+	resources.js
+
+images/
+	char-boy.png
+	char-cat-girl.png
+	char-horn-girl.png
+	char-pink-girl.png
+	char-princess-girl.png
+	enemy-bug.pmg
+	Gem Blue.png
+	Gem Green.png
+	Gem Orange.png
+	grass-block.png
+	Heart.png
+	Key.png
+	Rock.png
+	Selector.png
+	Star.png
+	stone-block.png
+	water-block.png
+
+README.md
+	images/frogger-image.jpg
 
 ## Contributing
 
