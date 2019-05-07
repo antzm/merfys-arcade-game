@@ -48,13 +48,13 @@ The game uses the following files:
   
 index.html  
   
-css/  
-	style.css  
+- css/  
+	- style.css  
   
-js/  
-	app.js  
-	engine.js  
-	resources.js  
+- js/  
+	- app.js  
+	- engine.js  
+	- resources.js  
   
 images/  
 	char-boy.png  
@@ -75,8 +75,8 @@ images/
 	stone-block.png  
 	water-block.png  
   
-README.md  
-	images/frogger-image.jpg  
+- README.md  
+	- images/frogger-image.jpg  
   
 ## Contributing
 
