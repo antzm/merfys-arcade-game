@@ -43,20 +43,20 @@ Your **README.md** file should be updated with instructions on both how to 1. Ru
 For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
 
 ## Dependencies  
-  
+
 The game uses the following files:  
-  
+
 - index.html  
   
-- css/  
-	- style.css
+- css/
+	- style.css  
   
-- js/  
+- js/
 	- app.js
 	- engine.js
-	- resources.js
+	- resources.js  
   
-images/  
+images/
 	- char-boy.png
 	- char-cat-girl.png
 	- char-horn-girl.png
@@ -73,11 +73,11 @@ images/
 	- Selector.png
 	- Star.png
 	- stone-block.png
-	- water-block.png
+	- water-block.png  
   
-- README.md  
+- README.md
 	- images/frogger-image.jpg  
-  
+
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
