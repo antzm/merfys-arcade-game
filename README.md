@@ -46,17 +46,17 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 The game uses the following files:  
 
-- index.html  
+* index.html  
   
-- css/
+* css/
 	- style.css  
   
-- js/
+* js/
 	- app.js
 	- engine.js
 	- resources.js  
   
-images/
+* images/
 	- char-boy.png
 	- char-cat-girl.png
 	- char-horn-girl.png
@@ -75,7 +75,7 @@ images/
 	- stone-block.png
 	- water-block.png  
   
-- README.md
+* README.md
 	- images/frogger-image.jpg  
 
 ## Contributing
