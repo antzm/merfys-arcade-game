@@ -48,15 +48,15 @@ The game uses the following files:
 
 * index.html  
   
-* css/
+* _css/_
 	- style.css  
   
-* js/
+* _js/_
 	- app.js
 	- engine.js
 	- resources.js  
   
-* images/
+* _images/_
 	- char-boy.png
 	- char-cat-girl.png
 	- char-horn-girl.png
