@@ -48,15 +48,15 @@ The game uses the following files:
 
 - index.html  
   
-- _css/_
+_css/_
 	- style.css  
   
-- _js/_
+_js/_
 	- app.js
 	- engine.js
 	- resources.js  
   
-- _images/_
+_images/_
 	- char-boy.png
 	- char-cat-girl.png
 	- char-horn-girl.png
@@ -83,5 +83,3 @@ The game uses the following files:
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 ## License
-
-
