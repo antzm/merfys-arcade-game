@@ -1,19 +1,21 @@
-# Merfys Arcade Game
+# Merfys Frogger Game
 
 ## Table of Contents
 
 - [Intro](#intro)
 - [History](#history)
-- [Instructions](#instructions)
-	- [How to Run the game](#how-to-run-the-game)
-	- [How to Play the game](#how-to-play-the-game)
+- [How to Run the game](#how-to-run-the-game)
+- [How to Play the game](#how-to-play-the-game)
 - [Dependencies](#dependencies)
-- [Contributing](#contributing)
 - [License](#license)
+
 
 ## Intro
 
-This project is part of Udacity's FEND program and the starter code can be found in this repository. According to the instructions, the functions for this project should be object-oriented functions (either class functions or class prototype functions) and the keyword `this` should be used appropriately inside the code, so to refer to the object the function is called upon.
+This project, which is called **"Classic Arcade Game Clone Project"** has been part of Udacity's FEND program and the starter code can be found in this [repository](https://github.com/udacity/frontend-nanodegree-arcade-game).  
+
+According to the instructions, the functions written for this project, should be **object-oriented** - either class functions (like `Player` and `People`) or class prototype functions such as `People.prototype.checkCollisions`. Also, the keyword `this` should be used appropriately within the class and class prototype functions to refer to the object the function is called upon.
+
 
 ## History
 
@@ -28,19 +30,28 @@ Worth mentioning also, is the characteristic music of the game, which is still r
 
 [_(History source: Wikipedia)_](https://en.wikipedia.org/wiki/Frogger)
 
-## Instructions
-
-Use this [rubric](https://review.udacity.com/#!/rubrics/2013/view) for self-checking your submission.
 
 ### How to Run the game
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+In order to run this game, you should download the zip file containing all the necessary files. After decompressing the zip file, you just need to run the **index.html** in order to play the game.
+
+All the necessary files are contained in that folder, and thus, no internet connection is needed in order to run this game.
+
+Keep in mind though that this game can only be played on computers with a physical keyboard, as you need the keyboard arrows in order to navigate the player during the game.
+
 
 ### How to Play the game
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+Below you can see a screenshot of this game and as you can notice, it is a slightly different version than the classical frogger game where there are always enemies around.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+![Merfys Frogger Game Screenshot](images/merfys-game.jpg)
+
+Instead, in this version, there are only friendly people walking next to the sea and the purpose of the game is to help the player, which incidentally is a princess called Queen, to reach the sea while practicing social distancing.
+
+The game has three levels, with increasing difficulty, as the people in each new level walk faster than the previous level.
+
+Thus, the purpose of the game is to complete all three levels, while using as few moves and as few restarts (resets) as possible.
+
 
 ## Dependencies  
 
@@ -57,29 +68,20 @@ The game uses the following files:
 	- resources.js
 
 - _images/_
-	- char-boy.png
+	- water-block-new.png
+	- stone-block.png
+	- grass-block.png
 	- char-cat-girl.png
 	- char-horn-girl.png
+	- char-boy.png
 	- char-pink-girl.png
 	- char-princess-girl.png
-	- enemy-bug.pmg
-	- Gem Blue.png
-	- Gem Green.png
-	- Gem Orange.png
-	- grass-block.png
-	- Heart.png
-	- Key.png
-	- Rock.png
-	- Selector.png
-	- Star.png
-	- stone-block.png
-	- water-block.png 
   
 - README.md
 	- images/frogger-image.jpg
+	- images/merfys-game.jpg
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 ## License
+
+Udacity's license can be read [here](License.md).
