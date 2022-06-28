@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Merfys Arcade Game</title>
+    <title>Merfy's Frogger Game</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- How To Use an Emoji as a Favicon Easily:
+    https://css-tricks.com/emoji-as-a-favicon/ -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='83'>🐶</text></svg>">
+
 </head>
 <body>
+
+<section class="game-details">
+
+    <span class="game-details-label">Level:</span>
+    <span class="game-details-info level">1</span>
+
+    <span class="game-details-label">Moves:</span>
+    <span class="game-details-info moves">0</span>
+
+    <span class="game-details-label">Resets:</span>
+    <span class="game-details-info resets">0</span>
+
+</section>
+
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
+
 </body>
 </html>
