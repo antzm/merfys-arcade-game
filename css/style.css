@@ -1,3 +1,39 @@
 body {
     text-align: center;
+    background-color: #fff0f5; /*LavenderBlush*/
 }
+
+canvas {
+    box-shadow: 26px 26px 36px rgba(0, 0 , 0, 0.63);
+}
+
+.game-details  {
+    font-size: 150%;    
+    color: #0000cd; /*MediumBlue*/
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+    margin-top:  1%;
+    margin-bottom: 5px;
+}
+
+.game-details-label {
+    display: inline-block;
+}
+
+.game-details-info {
+    display: inline-block;
+    text-align: left;
+    width: 56px;
+}
+
+.game-instuctions {
+    font-size: 108%;
+    color: #bc8f8f; /*RosyBrown*/
+    margin: 8px;
+    font-style: italic;
+}
+
+.modal-element-hidden {
+    display: none;
+}
+
