@@ -390,14 +390,59 @@ Player.prototype.handleInput = function(evt) {
 };
 
 
+// =====================
+// Starter code comment:
+// =====================
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
 
+const game = new Game();
+// First, we instantiate the game object, which provides
+// a few useful methods for the implementation of the game.
 
+
+const numberOfPeople = 8;
+const allPeople = [];
+
+for (let i = 0; i < numberOfPeople; i++) {
+    // In this loop we instantiate the People objects.
+    // Firstly, we provide a variable for the number
+    // of objects we would like to instantiate and then,
+    // we store those objects in the allPeople array.
+    // Using the game.randomNumber() we assign a random
+    // coordinate for the horizontal axis between
+    // -984 and -75, which corresponds to a range of 909,
+    // the horizontal size of the canvas. We assign negative
+    // coordinates otherwise the objects would suddenly
+    // appear on the canvas, should they were assigned 
+    // with positive coordinates.
+    // As for the vertical axis, using the method
+    // game.randomOption() we assign a random lane
+    // for each one of the objects at the Y coordinates 
+    // of 60, 140 or 220.
+    const xCoordinate = game.randomNumber(-984, -75);
+    const yCoordinate = game.randomOption(60, 140, 220);
+
+    allPeople[i] = new People(xCoordinate, yCoordinate);
+
+}
+
+
+const player = new Player(game.randomOption(200, 400, 600), 400);
+// We instantiate the player object at the coordinate y=400 while,
+// the x coordinate is a random number from 200, 400 or 600 so that
+// the player will start either on the left, center or right side
+// of the canvas, using the method game.randomOption()
+
+
+// =====================
+// Starter code comment:
+// =====================
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
+
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
@@ -408,3 +453,47 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+
+// ===============================================
+// Changes made to the stater code of js/engine.js
+// ===============================================
+//
+// Changing the Canvas size:
+// =========================
+// Line 27: canvas.width = 909;
+// Line 28: canvas.height = 586;
+// 
+// Changing the columns for the blocks:
+// ====================================
+// Line 117: numRows = 6,
+// Line 118: numCols = 9,
+//
+// Renaming allEnemies array and enemy parameter:
+// ==============================================
+// Line 93: allPeople.forEach(function(person) {
+//          person.update(dt);
+//          });
+//
+// Line 152: allPeople.forEach(function(person) {
+//           person.render();
+//           });
+//
+// Image edit and update:
+// ======================
+// Line 109: var rowImages = [
+//           'images/water-block-new.png',   // Top row is water
+//
+// Updating the Resources.load():
+// ==============================
+// Line 171: Resources.load([
+//              'images/water-block-new.png',
+//              'images/stone-block.png',
+//              'images/grass-block.png',
+//              'images/char-cat-girl.png',
+//              'images/char-horn-girl.png',
+//              'images/char-boy.png',
+//              'images/char-pink-girl.png',
+//              'images/char-princess-girl.png'
+//            ]);
+//
