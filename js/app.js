@@ -173,30 +173,133 @@ let Game = function() {
 }
 
 
-
-
+// =====================
+// Starter code comment:
+// =====================
 // Enemies our player must avoid
-var Enemy = function() {
+// var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
-};
+    // this.sprite = 'images/enemy-bug.png';
+// };
 
+
+let People = function(coordX, coordY) {
+    // The People constructor function uses two parameters for the X and Y
+    // coordinates of the sprites, while the initial speed of the sprites
+    // is set to 100 and also, a random sprite is assigned to each object.
+    // During reset, i.e. when the sprites disappear from the screen,
+    // their coordinates change and also, the image of each object changes
+    // as an attempt to make the game a little more interesting.
+    this.x = coordX;
+    this.y = coordY;
+    this.speed = 100;
+    this.sprite = game.randomPerson();
+
+    this.reset = function() {
+        this.x = game.randomNumber(-984, -75);
+        this.y = game.randomOption(60, 140, 220);
+        this.sprite = game.randomPerson();
+    }
+
+    // Alternative reset() method using the initial coordinates 
+    // for each sprite, although this approach makes the game more easy.
+
+    // this.starterX = coordX;
+    // this.starterY = coordY;
+
+    // this.reset = function() {
+    //     this.x = this.starterX;
+    //     this.y = this.starterY;
+    // }
+
+}
+
+
+// =====================
+// Starter code comment:
+// =====================
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
-Enemy.prototype.update = function(dt) {
+// Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+// };
+
+
+People.prototype.update = function(dt) {
+    // Depending on the level, the speed varies from
+    // 150 up to 250 while the level 4 (speed 0) is used 
+    // to pause the sprites at the end of the game, when 
+    // the modal appears.
+    // Also, a conditional statement checks when an
+    // object goes out of the canvas, in order to reset it.
+    if (game.level === 1) {
+            allPeople.forEach(function(person) {
+            person.speed = 150;
+        });
+
+    } else if (game.level === 2) {
+            allPeople.forEach(function(person) {
+            person.speed = 200;
+        });
+
+    } else if (game.level === 3) {
+            allPeople.forEach(function(person) {
+            person.speed = 250;
+        });
+
+    } else if (game.level === 4) {
+            allPeople.forEach(function(person) {
+            person.speed = 0;
+        });
+    }
+
+    this.x = this.x + (this.speed * dt);
+
+    if (this.x >= 909 ) {
+        this.reset();
+    }
+
+    this.checkCollisions();
+
 };
 
-// Draw the enemy on the screen, required method for game
-Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+
+People.prototype.checkCollisions = function() {
+    // The collisions are checked based on the distance between the People objects
+    // and the player object. With some trial and error, the distance of 43 pixels
+    // was selected and using absolute values, to simplify the code, we check whether
+    // a collison took place and then, we reset the player object and we also increase
+    // the number of resets and we display the new value.
+    if ((Math.abs(player.x - this.x) <= 43) && (Math.abs(player.y - this.y) <= 43)) {
+        player.reset();
+        game.resets++; 
+        game.displayResets();
+    }
+
 };
+
+
+// =====================
+// Starter code comment:
+// =====================
+// Draw the enemy on the screen, required method for game
+// Enemy.prototype.render = function() {
+//     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+// };
+
+
+People.prototype.render = function() {
+    // Drawing the people on the screen using the provided method
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+
+};
+
 
 // Now write your own player class
 // This class requires an update(), render() and
