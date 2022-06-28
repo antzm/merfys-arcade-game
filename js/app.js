@@ -301,9 +301,93 @@ People.prototype.render = function() {
 };
 
 
+// =====================
+// Starter code comment:
+// =====================
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+
+
+let Player = function(coordX, coordY) {
+    // The Player constructor function uses the coordX and coordY
+    // parameters for the X and Y position of the player while
+    // the reset method places the player randomly on 3 different
+    // positions, either on the left, center, or right of the canvas.
+    // Using the method game.randomOption() the X coordinate during
+    // reset could be either 200, 400 or 600, while the Y coordinate
+    // remains constant at 400.
+    this.x = coordX;
+    this.y = coordY;
+    this.sprite = 'images/char-princess-girl.png';
+
+    this.reset = function() {
+        this.x = game.randomOption(200, 400, 600);
+        this.y = 400;
+    }
+}
+
+
+Player.prototype.update = function(dt) {
+    // This method checks whether the player has reached
+    // the top row of the tiles and if the level is 1 or 2,
+    // then the player resets and the level increases.
+    // On level 3 though, the level increases to level 4,
+    // which uses a speed of 0 to stop the sprites,
+    // and the modal is displayed.
+    if (this.y <= -40 && game.level <= 2) {
+            this.reset();
+            game.level++;
+            game.displayLevel();
+
+    } else if (this.y <= -40 && game.level === 3) {
+            game.level++;
+            game.stop();
+            game.displayModal();
+    }
+
+};
+
+
+Player.prototype.render = function(){
+    // Drawing the player on the screen using the provided method
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+
+};
+
+
+Player.prototype.handleInput = function(evt) {
+    // The game.level=4 is a level where the speed is set to 0
+    // and is used to pause the sprites when the modal appears.
+    // To also avoid the player from moving during that time,
+    // the condition game.level<=3 is checked and only then
+    // the player is able to move around the boundaries of 
+    // the canvas, as have been set in the following conditional
+    // statements. Also, the variable game.moves counts the
+    // movements of the player and the value is displayed
+    // on the screen using the method game.displayMoves().
+    if (evt === 'left' && this.x > 0 && game.level <= 3) {
+        this.x -= 25;
+        game.moves++;
+        game.displayMoves();
+
+    } else if (evt === 'right' && this.x < 800 && game.level <= 3) {
+        this.x += 25;
+        game.moves++;
+        game.displayMoves();
+
+    } else if (evt === 'up' && this.y > -40 && game.level <= 3) {
+        this.y -= 25;
+        game.moves++;
+        game.displayMoves();
+
+    } else if (evt === 'down' && this.y < 400 && game.level <= 3) {
+        this.y += 25;
+        game.moves++;
+        game.displayMoves();
+    }
+     
+};
 
 
 // Now instantiate your objects.
